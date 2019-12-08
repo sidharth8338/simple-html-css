@@ -1,0 +1,186 @@
+html {
+  overflow: auto;
+}
+body {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px !important;
+  overflow: auto;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(165, 42, 42, 0.856),
+      rgba(238, 156, 156, 0.87)
+    ),
+    url("./images/close-up-of-wooden-plank-326311.jpg");
+  background-size: 100% auto;
+  backface-visibility: hidden;
+}
+
+div {
+  width: 970px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+p {
+  letter-spacing: 2px;
+}
+
+.main {
+  display: -moz-inline-grid;
+}
+
+header {
+  height: 100px;
+  width: 970px;
+  border-bottom: solid 1px rgb(192, 215, 221);
+}
+section h3 {
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+h3 span {
+  display: block;
+  padding: 12px 0 0 0;
+  width: 40px;
+  height: 30px;
+  background: rgb(20, 20, 20);
+  color: #f4f4f6;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+}
+
+#head-section {
+  text-align: center;
+  letter-spacing: 30px;
+  animation-duration: 2s;
+  animation-name: moveToRight;
+  animation-timing-function: ease-out;
+}
+
+#bottom-section {
+  animation-duration: 2s;
+  animation-name: moveToLeft;
+  animation-timing-function: ease-out;
+}
+
+#grid {
+  display: grid;
+}
+
+#add-to-list {
+  background-color: chocolate;
+  color: rgb(255, 255, 255);
+  padding: 10px 40px;
+  border-radius: 30px;
+  border: none;
+  transition: 0.2s;
+}
+
+#add-to-list:hover {
+  transform: translateY(-4px);
+}
+
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+li {
+  color: #fff;
+  height: 0;
+  line-height: 2em;
+  margin: 0;
+  padding: 0 0.5em;
+  width: 10em;
+}
+
+li.show {
+  height: 2em;
+  margin: 2px 0;
+}
+
+ul.label {
+  width: 100%;
+  margin: 35px 0 50px 0;
+  float: left;
+  position: relative;
+  height: 404px;
+}
+ul.label li {
+  display: inline;
+  position: absolute;
+}
+ul.label li:nth-of-type(1) {
+  border-color: #f5ee62 transparent transparent transparent;
+  border-style: solid;
+  border-width: 207px;
+  height: 0px;
+  width: 0px;
+  top: 0px;
+  left: 0px;
+}
+ul.label li:nth-of-type(2) {
+  border-color: #71d2fc transparent transparent transparent;
+  border-style: solid;
+  border-width: 149px;
+  height: 0px;
+  width: 0px;
+  top: 47%;
+  margin-top: -149px;
+  left: 197px;
+}
+ul.label li:nth-of-type(3) {
+  border-color: rgb(185, 32, 83) transparent transparent transparent;
+  border-style: solid;
+  border-width: 149px;
+  height: 0px;
+  width: 0px;
+  top: 50%;
+  margin-top: -149px;
+  left: 346px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem; /* Footer height */
+}
+
+#footer {
+  padding-top: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 2.5rem; /* Footer height */
+  background: #803812;
+}
